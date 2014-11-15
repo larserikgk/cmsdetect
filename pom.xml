@@ -11,6 +11,7 @@
         <module>cmsdetect-cli</module>
         <module>cmsdetect-core</module>
         <module>cmsdetect-web</module>
+        <module>cmsdetect-rest</module>
     </modules>
 
     <dependencies>

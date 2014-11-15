@@ -54,7 +54,7 @@ public class RadiantDetector {
     @SecondPass(4)
     public boolean checkAdmin(Page page) {
         try{
-            return hasPoweredByRadiant(pageRespository.getPage(page.getUrl() + "admin/login"));
+            return hasPoweredByRadiant(pageRespository.getPage(page.getUrl() + "/admin/login"));
         }catch(Exception e){
             return false;
         }

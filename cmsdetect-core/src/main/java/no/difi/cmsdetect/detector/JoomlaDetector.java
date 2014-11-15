@@ -36,7 +36,7 @@ public class JoomlaDetector {
     @SecondPass
     public boolean hasAdministrator(Page page){
         try{
-            return hasGenerator(pageRepository.getPage(page.getUrl()+"administrator/"));
+            return hasGenerator(pageRepository.getPage(page.getUrl()+"/administrator/"));
         }catch(Exception e){
             return false;
         }
