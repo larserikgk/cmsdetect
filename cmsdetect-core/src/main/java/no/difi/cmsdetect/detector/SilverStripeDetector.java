@@ -28,8 +28,8 @@ public class SilverStripeDetector {
     @SecondPass(2)
     public boolean checkAdmin(Page page){
         try{
-            pageRepository.getPage(page.getUrl() + "Security/login").getDocument();
-            if(pageRepository.getPage(page.getUrl() + "Security/login").getHeaders().get(null).contains("HTTP/1.1 301 Moved Permanently")){
+            pageRepository.getPage(page.getUrl() + "/Security/login").getDocument();
+            if(pageRepository.getPage(page.getUrl() + "/Security/login").getHeaders().get(null).contains("HTTP/1.1 301 Moved Permanently")){
                 return false;
             }
             return true;

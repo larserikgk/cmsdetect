@@ -17,7 +17,7 @@ public class DjangoDetector {
     @FirstPass(2)
     public boolean hasDjangoAdminSite(Page page) {
         try {
-            Document adminDoc = pageRepository.getPage(page.getUrl() + "admin/").getDocument();
+            Document adminDoc = pageRepository.getPage(page.getUrl() + "/admin/").getDocument();
             return (adminDoc.select("title:contains(Django)").toString().length() > 0);
         }
         catch (Exception e) {

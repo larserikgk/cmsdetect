@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DetectorController {
-
     ApplicationContext applicationContext = new FileSystemXmlApplicationContext("classpath:application.xml");
     DetectLogic detectLogic = applicationContext.getBean(DetectLogic.class);
 

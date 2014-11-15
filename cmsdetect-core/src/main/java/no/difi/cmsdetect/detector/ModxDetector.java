@@ -18,7 +18,7 @@ public class ModxDetector {
     @FirstPass
     public boolean checkManagerLink(Page page) {
         try {
-            Document managerDoc = pageRepository.getPage(page.getUrl() + "manager/").getDocument();
+            Document managerDoc = pageRepository.getPage(page.getUrl() + "/manager/").getDocument();
             return (managerDoc.select("title:contains(modx)").toString().length() > 0);
         }
         catch (Exception e) {
@@ -41,7 +41,7 @@ public class ModxDetector {
     @FirstPass
     public boolean checkConnectors(Page page) {
         try {
-            return !pageRepository.getPage(page.getUrl() + "connectors/").getDocument().toString().isEmpty();
+            return !pageRepository.getPage(page.getUrl() + "/connectors/").getDocument().toString().isEmpty();
         }
         catch (Exception e) {
             return false;
